@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
   # This method is not available in has_secure_token
   def invalidate_token
-    self.update_columns(token: nil)
+    self.update_columns(auth_token: nil)
   end
 
   def self.valid_login?(email, password)

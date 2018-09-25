@@ -28,7 +28,7 @@ gem 'bcrypt'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'pivotal_git_scripts'
 gem 'faker'
-gem 'devise_token_auth'
+# gem 'devise_token_auth'
 gem 'omniauth-google-oauth2'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible

@@ -12,17 +12,17 @@ class SessionsController < ApiController
 
   def destroy
     logout
-    head :ok
+    render json: { message: "logged out"}
   end
 
   private
 
   def send_auth_token_for_valid_login_of(user)
-    render json: { token: user.token }
+    render json: { token: user.auth_token }
   end
 
   def allow_token_to_be_used_only_once_for(user)
-    user.regenerate_token
+    user.regenerate_auth_token
   end
 
   def logout

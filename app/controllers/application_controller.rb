@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
-  include DeviseTokenAuth::Concerns::SetUserByToken
-  include Response
-  before_action :authenticate_user!
+  include ActionController::HttpAuthentication::Token::ControllerMethods
+  
+
 
   def members_only
     render json: {
